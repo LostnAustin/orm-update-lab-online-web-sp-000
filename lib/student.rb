@@ -61,7 +61,7 @@ class Student
 
     def self.find_by_name(name)
       sql = <<-SQL
-        SELECT student.name FROM students
+        SELECT name FROM students
          WHERE name = ?
          SQL
         DB[:conn].execute(sql, name).map do |row|
