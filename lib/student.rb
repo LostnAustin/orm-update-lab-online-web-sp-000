@@ -64,7 +64,7 @@ class Student
         SELECT name FROM students
          WHERE name = "#{name}"
       SQL
-      DB[:conn].execute(sql,name)
+      DB[:conn].execute(sql)
     end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
